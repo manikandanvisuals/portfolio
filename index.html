@@ -43,6 +43,8 @@
     align-items: center;
     pointer-events: none;
     z-index: 10;
+      clip-path: circle(120px at 50% 50%);
+transition: clip-path 0.1s ease;
 }
   </style>
 
@@ -65,6 +67,14 @@
         </div>
     </div>
 
+  <script>
+const revealLayer = document.querySelector('.reveal-layer');
+
+document.addEventListener('mousemove', (e) => {
+    revealLayer.style.clipPath =
+        `circle(120px at ${e.clientX}px ${e.clientY}px)`;
+});
+</script>
 </body>
 
 </html>
