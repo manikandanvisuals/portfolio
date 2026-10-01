@@ -70,10 +70,28 @@ transition: clip-path 0.1s ease;
   <script>
 const revealLayer = document.querySelector('.reveal-layer');
 
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+let currentX = mouseX;
+let currentY = mouseY;
+
 document.addEventListener('mousemove', (e) => {
-    revealLayer.style.clipPath =
-        `circle(120px at ${e.clientX}px ${e.clientY}px)`;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 });
+
+function animateReveal() {
+    currentX += (mouseX - currentX) * 0.12;
+    currentY += (mouseY - currentY) * 0.12;
+
+    revealLayer.style.clipPath =
+        `circle(120px at ${currentX}px ${currentY}px)`;
+
+    requestAnimationFrame(animateReveal);
+}
+
+animateReveal();
 </script>
 </body>
 
