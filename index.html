@@ -7,38 +7,63 @@
         background: #111111;
         color: white;
         font-family: Arial, sans-serif;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-      
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
     h1 {
-    font-size: 72px;
-    font-weight: 700;
-    letter-spacing: -3px;
-    margin: 0;
-}
+        font-size: clamp(42px, 7vw, 110px);
+        font-weight: 700;
+        letter-spacing: -3px;
+        margin: 0;
+    }
+
     p {
-    margin-top: 18px;
-    font-size: 18px;
-    color: #999999;
-    letter-spacing: 1px;
+        margin-top: 18px;
+        font-size: 18px;
+        color: #999999;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        width: 100%;
+        max-width: 1400px;
+        text-align: center;
+    }
+    .reveal-layer {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
 }
-</style>
-    <meta charset="UTF-8">
+  </style>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Manikandan Visuals</title>
+  <title>Manikandan Visuals</title>
 </head>
 
 <body>
 
-    <h1>MANIKANDAN VISUALS</h1>
+    <div class="hero">
+        <h1>MANIKANDAN VISUALS</h1>
+        <p>Graphic Designer & Video Editor</p>
+    </div>
 
-    <p>Graphic Designer & Video Editor</p>
+    <div class="reveal-layer">
+        <div class="reveal-content">
+            SELECTED WORKS
+        </div>
+    </div>
 
 </body>
 
