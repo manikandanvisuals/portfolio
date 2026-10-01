@@ -91,7 +91,7 @@ function animateReveal() {
     currentY += (mouseY - currentY) * 0.12;
 
     revealLayer.style.clipPath =
-        `circle(150px at ${currentX}px ${currentY}px)`;
+       `circle(${window.innerWidth <= 600 ? 90 : 150}px at ${currentX}px ${currentY}px)`
 
     requestAnimationFrame(animateReveal);
 }
